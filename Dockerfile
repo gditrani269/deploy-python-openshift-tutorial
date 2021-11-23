@@ -1,7 +1,8 @@
 from alpine:latest
 RUN apk add --no-cache py3-pip \
     && pip install --upgrade pip \
-    && apk --no-cache add curl
+    && apk --no-cache add curl \
+    && apk --no-cache add vim
 
 WORKDIR /app
 COPY . /app
